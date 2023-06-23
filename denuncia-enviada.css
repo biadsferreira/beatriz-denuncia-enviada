@@ -1,0 +1,310 @@
+/* Declaração das fontes */
+@font-face {
+   font-family: dosis-book;
+   src: url("fonts/dosis-book.ttf") format("truetype");
+}
+@font-face {
+   font-family: dosis-bold;
+   src: url("fonts/dosis-bold.ttf") format("truetype");
+}
+/* Zerar margem, padding e configuração base do texto */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body * {
+   background-color: white;
+}
+/* Divisão do Flex-box */
+.container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 100vh;
+}
+header {
+   text-align: center;
+   margin: 20px;
+   margin-top: 50px;
+}
+/* Logotipo */
+.logo {
+   width: 300px;
+}
+/* Título principal */
+h1 {
+   font-family: dosis-bold;
+   font-size: 25px;
+   text-align: center;
+   color: #646464;
+}
+/* Cor laranja do título "doar e adotar" */
+strong {
+   font-family: dosis-bold;
+   color: #ff9f32;
+}
+main {
+   height: 50vh;
+   text-align: center;
+   margin: 20px;
+}
+
+h2 {
+   font-family: dosis-bold;
+   font-size: 16px;
+   line-height: 27px;
+   text-align: center;
+   height: 35px;
+   width: 600px;
+   color: white;
+   background-color: #ff9f32;
+   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+   border-radius: 10px;
+   margin: auto;
+   padding-top: 5px;
+   letter-spacing: 1.5px;
+}
+
+h3 {
+   font-family: dosis-book;
+   color: #848383;
+   font-size: 14px;
+   text-align: justify;
+   letter-spacing: 1px;
+   width: 600px;
+   margin: auto;
+   margin-top: 40px;
+}
+.retorno {
+   display: inline-flex;
+   align-items: center;
+   margin-top: 40px;
+}
+.retorno img {
+   height: 40px;
+   width: 40px;
+}
+.retorno a {
+   font-family: dosis-bold;
+   text-decoration: none;
+   color: #646464;
+   margin-left: 8px;
+   margin-right: 30px;
+}
+
+.doe {
+   display: inline-flex;
+   align-items: center;
+   margin-top: 40px;
+}
+.doe img {
+   height: 40px;
+   width: 40px;
+}
+.doe a {
+   font-family: dosis-bold;
+   text-decoration: none;
+   color: #646464;
+   margin-left: 8px;
+}
+/*hamburguer*/
+.btn-tablet {
+   display: none;
+}
+.btn-celular {
+   display: none;
+}
+/* Configuração para telas TABLET de 1201px a 600px */
+@media (max-width: 1201px) {
+   .btn-tablet {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      cursor: pointer;
+      align-items: center;
+   }
+
+   .btn-tablet img {
+      margin-top: 20px;
+      margin-left: 20px;
+   }
+   /* Div contendo os links de navegação mobile após clicar no hamburguer */
+   .menu-tablet-interno {
+      /* Position relative para a div Main não cobrir o menu */
+      position: relative;
+      right: 400px;
+      z-index: 999;
+      margin-top: 300px;
+      float: left;
+      width: 340px;
+      height: auto;
+      padding: 10px;
+      border-radius: 20px;
+      background-color: white;
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+      display: none;
+      flex-flow: column;
+      justify-content: center;
+      row-gap: 30px;
+   }
+
+   /* Configuração dos links do menu */
+   .menu-tablet-interno > a {
+      width: 100%;
+      height: auto;
+      display: flex;
+
+      align-items: center;
+      text-decoration: none;
+   }
+
+   /* Configuração dos links quando o mouse passa em cima */
+   .menu-tablet-interno > a:hover {
+      text-decoration: underline;
+   }
+
+   /* Configuração dos ícones do menu */
+   .menu-tablet-interno > a > img {
+      margin-right: 85px;
+      height: 35px;
+   }
+
+   .menu-tablet-interno p {
+      width: 200px;
+      margin-right: 5px;
+      margin-top: 20px;
+   }
+}
+/* esconde menu hamburguer do celular */
+@media (min-width: 651px) {
+   .btn-celular {
+      display: none;
+   }
+   .btn-tablet {
+      display: none;
+   }
+}
+/* -- RESPONSIVIDADE 600PX -- */
+@media screen and (max-width: 600px) {
+   .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+   }
+
+   header > img {
+      width: 200px;
+   }
+   h1 {
+      font-size: 18px;
+      width: 200px;
+      margin: auto;
+      text-align: center;
+   }
+
+   main {
+      margin: 20px;
+   }
+
+   h2 {
+      margin: 0px;
+      width: auto;
+      text-align: center;
+      height: 35px;
+   }
+   h3 {
+      margin: 20px;
+      margin-top: 30px;
+      width: auto;
+      text-align: justify;
+   }
+   .retorno {
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+   }
+   .retorno img {
+      height: 30px;
+      width: 30px;
+      margin: 0px;
+   }
+   .retorno a {
+      font-size: 12px;
+      margin: 0px;
+      margin-right: 10px;
+      text-align: center;
+   }
+
+   .doe {
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+   }
+   .doe img {
+      height: 30px;
+      width: 30px;
+      margin: 0px;
+      text-align: center;
+   }
+   .doe a {
+      font-size: 12px;
+      margin: 0px;
+      text-align: center;
+   }
+
+   .btn-celular {
+      height: 60px;
+      width: 60px;
+      cursor: pointer;
+      display: flex;
+      flex-flow: row;
+      align-self: flex-start;
+      padding-left: 20px;
+      padding-top: 20px;
+   }
+   .btn-tablet {
+      display: none;
+   }
+
+   .menu-celular-interno {
+      border-radius: 20px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      background-color: white;
+      float: right;
+      position: relative;
+      top: 50px;
+      right: 55px;
+      width: fit-content;
+      height: fit-content;
+      display: none;
+      padding: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+   }
+
+   .menu-celular-interno > a > img {
+      height: 35px;
+      margin-right: 20px;
+   }
+
+   .menu-celular-interno > a {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 15px;
+      text-decoration: none;
+   }
+
+   .menu-celular-interno > a:hover {
+      text-decoration: underline;
+   }
+
+   .menu-celular-interno p {
+      display: flex;
+      flex-flow: row;
+      width: 120px;
+   }
+}
